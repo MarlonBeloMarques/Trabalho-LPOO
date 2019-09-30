@@ -7,17 +7,12 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class ColecaoAluno extends Aluno {
+public class ColecaoAluno {
 
 	private Set<Aluno> alunos = new HashSet<>();
 	
 	public ColecaoAluno() {
 		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public ColecaoAluno(int matricula, String nome, int semestre) {
-		super(matricula, nome, semestre);
 		// TODO Auto-generated constructor stub
 	}
 
