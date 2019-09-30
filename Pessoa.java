@@ -1,6 +1,6 @@
 package trabalho.t1;
 
-public class ComparaNome implements IPossuiNome {
+public class Pessoa implements IPossuiNome {
 
 	@Override
 	public void setNome(String nome) {
@@ -13,5 +13,6 @@ public class ComparaNome implements IPossuiNome {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	
+	
 }
