@@ -1,6 +1,22 @@
 package trabalho.t1;
 
-public abstract class ComparaNome implements IPossuiNome {
+/*
+ * 
+ * TODO verificar se esta correto 
+ */
+
+public class ComparaNome {
 	
-	public abstract int compare(Object obj1, Object obj2);
+	public IPossuiNome possuiNome;
+
+	public ComparaNome(IPossuiNome possuiNome) {
+		super();
+		this.possuiNome = possuiNome;
+	}
+
+	public int compare(Object obj1, Object obj2) {
+		
+		return 0;
+	}
 }
+

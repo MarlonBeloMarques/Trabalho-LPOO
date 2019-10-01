@@ -1,7 +1,9 @@
 package trabalho.t1;
 
-public interface IColecaoGenerica {
+import java.util.Iterator;
 
-	
+public interface IColecaoGenerica<E> {
+
+	public Iterator<E> getIterator(); 
 	
 }
