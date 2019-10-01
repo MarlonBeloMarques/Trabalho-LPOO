@@ -7,7 +7,7 @@ public class ImprimeColecao {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ImprimeColecao(IColecaoGenerica colecaoGenerica) {
+	public ImprimeColecao(IColecaoGenerica<?> colecaoGenerica) {
 
 	}
 
