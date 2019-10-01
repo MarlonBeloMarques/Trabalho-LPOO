@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class ColecaoDisciplina {
+public class ColecaoDisciplina implements IColecaoGenerica {
 
 	private Set<Disciplina> disciplinas = new HashSet<>();
 
@@ -19,7 +19,7 @@ public class ColecaoDisciplina {
 		disciplinas.add(disciplina);
 	}
 
-	public Iterator<Disciplina> getIterator(){
+	public Iterator<Disciplina> getIterator() {
 		return disciplinas.iterator();
 	}
 

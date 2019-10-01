@@ -6,12 +6,12 @@ public class ImprimeColecao {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	public ImprimeColecao(IColecaoGenerica colecaoGenerica) {
-		
+
 	}
 
 	public void imprimir() {
-		
+
 	}
 }
