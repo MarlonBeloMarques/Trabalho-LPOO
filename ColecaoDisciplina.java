@@ -28,4 +28,3 @@ public class ColecaoDisciplina {
 		Collections.sort(disciplinaSorted, (a1, a2) -> a1.getNome().compareTo(a2.getNome()));
 	}
 }
-
