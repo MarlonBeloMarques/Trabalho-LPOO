@@ -9,6 +9,9 @@ import java.util.stream.Collectors;
 
 public class ColecaoAluno implements IColecaoGenerica<Aluno> {
 
+	/*
+	 * TODO verificar se esta correto
+	 */
 	private ComparaNome compNome;
 	
 	private Set<Aluno> alunos = new HashSet<>();

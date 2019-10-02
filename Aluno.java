@@ -22,5 +22,12 @@ public class Aluno extends Pessoa {
 	public void setSemestre(int semestre) {
 		this.semestre = semestre;
 	}
+
+	@Override
+	public String toString() {
+		return "Aluno [semestre=" + semestre + ", getNome()=" + getNome() + ", getMatricula()=" + getMatricula() + "]";
+	}
+	
+	
 	
 }

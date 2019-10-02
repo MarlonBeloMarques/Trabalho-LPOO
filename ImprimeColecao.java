@@ -1,17 +1,25 @@
 package trabalho.t1;
 
-public class ImprimeColecao {
+import java.util.Iterator;
 
+public class ImprimeColecao<E> {
+	
+	private IColecaoGenerica<E> col;
+	
 	public ImprimeColecao() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public ImprimeColecao(IColecaoGenerica<?> colecaoGenerica) {
-
+	public ImprimeColecao(IColecaoGenerica<E> colecaoGenerica) {
+		this.col = colecaoGenerica; 
 	}
 
 	public void imprimir() {
-
+		Iterator<E> Iterator = col.getIterator();
+		
+		while (Iterator.hasNext()) {
+			System.out.println(Iterator.next());
+		}
 	}
 }

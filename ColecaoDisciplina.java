@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class ColecaoDisciplina implements IColecaoGenerica {
+public class ColecaoDisciplina implements IColecaoGenerica<Disciplina> {
 
 	private Set<Disciplina> disciplinas = new HashSet<>();
 
@@ -19,12 +19,12 @@ public class ColecaoDisciplina implements IColecaoGenerica {
 		disciplinas.add(disciplina);
 	}
 
-	public Iterator<Disciplina> getIterator() {
-		return disciplinas.iterator();
-	}
-
 	public void ordena() {
 		List<Disciplina> disciplinaSorted = disciplinas.stream().collect(Collectors.toList());
 		Collections.sort(disciplinaSorted, (a1, a2) -> a1.getNome().compareTo(a2.getNome()));
+	}
+	
+	public Iterator<Disciplina> getIterator() {
+		return disciplinas.iterator();
 	}
 }
