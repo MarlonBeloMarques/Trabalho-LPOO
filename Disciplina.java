@@ -28,4 +28,10 @@ public class Disciplina extends ElementoAcademico {
 		this.cargaHoraria = cargaHoraria;
 	}
 
+	@Override
+	public String toString() {
+		return "Disciplina [semestre=" + semestre + ", cargaHoraria=" + cargaHoraria + ", getCodigo()=" + getCodigo()
+				+ ", getNome()=" + getNome() + "]";
+	}
+
 }
