@@ -9,11 +9,6 @@ import java.util.stream.Collectors;
 
 public class ColecaoAluno implements IColecaoGenerica<Aluno> {
 
-	/*
-	 * TODO verificar se esta correto
-	 */
-	private ComparaNome compNome;
-	
 	private Set<Aluno> alunos = new HashSet<>();
 	
 	public ColecaoAluno() {
@@ -22,7 +17,13 @@ public class ColecaoAluno implements IColecaoGenerica<Aluno> {
 	}
 
 	public void adicionaAluno(Aluno aluno) {
-		alunos.add(aluno);
+		int i = 0;
+		for (Aluno al : alunos) {
+			i = ComparaNome.compare(aluno, al);
+		}
+		
+		if(i == 0)
+			alunos.add(aluno);
 	}
 	
 	public void ordena() {

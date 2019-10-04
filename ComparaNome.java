@@ -1,22 +1,14 @@
 package trabalho.t1;
 
-/*
- * 
- * TODO verificar se esta correto 
- */
-
 public class ComparaNome {
 	
-	public IPossuiNome possuiNome;
-
-	public ComparaNome(IPossuiNome possuiNome) {
-		super();
-		this.possuiNome = possuiNome;
+	public static int compare(IPossuiNome nome1, IPossuiNome nome2 ) {
+		if(nome1.getNome().equalsIgnoreCase(nome2.getNome())) {
+			System.out.println("Nomes iguais: " + nome1.getNome());
+			return 0;
+		}
+		return 1;
 	}
-
-	public int compare(Object obj1, Object obj2) {
-		
-		return 0;
-	}
+	
 }
 
