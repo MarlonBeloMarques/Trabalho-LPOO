@@ -16,11 +16,13 @@ public class ColecaoDisciplina implements IColecaoGenerica<Disciplina> {
 	}
 
 	public void adicionaDisciplina(Disciplina disciplina) {
+		ComparaNome comparaNome = new ComparaNome();
 		int i = 0;
-		for (Disciplina disc : disciplinas) {
-			i = ComparaNome.compare(disciplina, disc);
-		}
-		
+		if(disciplinas.isEmpty())
+			disciplinas.add(disciplina);
+		for (Disciplina disciplina2 : disciplinas) {
+			i += comparaNome.compare(disciplina, disciplina2);
+		}	
 		if(i == 0)
 			disciplinas.add(disciplina);
 	}

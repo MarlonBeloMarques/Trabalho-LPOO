@@ -17,9 +17,12 @@ public class ColecaoAluno implements IColecaoGenerica<Aluno> {
 	}
 
 	public void adicionaAluno(Aluno aluno) {
+		ComparaNome comparaNome = new ComparaNome();
 		int i = 0;
-		for (Aluno al : alunos) {
-			i = ComparaNome.compare(aluno, al);
+		if(alunos.isEmpty())
+			alunos.add(aluno);
+		for (Aluno aluno2 : alunos) {
+			i += comparaNome.compare(aluno, aluno2);
 		}
 		
 		if(i == 0)
