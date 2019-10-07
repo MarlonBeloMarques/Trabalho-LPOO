@@ -2,6 +2,8 @@ package trabalho.t1;
 
 import java.util.Iterator;
 
+import trabalho.t1.domain.IColecaoGenerica;
+
 public class ImprimeColecao<E> {
 	
 	private IColecaoGenerica<E> col;

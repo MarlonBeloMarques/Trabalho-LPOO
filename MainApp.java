@@ -1,5 +1,10 @@
 package trabalho.t1;
 
+import trabalho.t1.domain.Aluno;
+import trabalho.t1.domain.Disciplina;
+import trabalho.t1.service.ColecaoAluno;
+import trabalho.t1.service.ColecaoDisciplina;
+
 public class MainApp {
 
 	public static void main(String[] args) {

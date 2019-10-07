@@ -1,4 +1,4 @@
-package trabalho.t1;
+package trabalho.t1.domain;
 
 public class Aluno extends Pessoa implements IPossuiSemestre {
 

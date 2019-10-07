@@ -1,4 +1,4 @@
-package trabalho.t1;
+package trabalho.t1.domain;
 
 import java.util.Iterator;
 

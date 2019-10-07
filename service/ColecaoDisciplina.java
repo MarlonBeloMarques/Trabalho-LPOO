@@ -1,4 +1,4 @@
-package trabalho.t1;
+package trabalho.t1.service;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -6,6 +6,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import trabalho.t1.domain.Disciplina;
+import trabalho.t1.domain.IColecaoGenerica;
 
 public class ColecaoDisciplina implements IColecaoGenerica<Disciplina> {
 

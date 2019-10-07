@@ -1,4 +1,6 @@
-package trabalho.t1;
+package trabalho.t1.service;
+
+import trabalho.t1.domain.IPossuiNome;
 
 public class ComparaNome {
 	
