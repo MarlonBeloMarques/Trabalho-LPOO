@@ -1,5 +1,6 @@
 package trabalho.t1.service;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -13,6 +14,7 @@ import trabalho.t1.domain.IColecaoGenerica;
 public class ColecaoAluno implements IColecaoGenerica<Aluno> {
 
 	private Set<Aluno> alunos = new HashSet<>();
+	private List<Aluno> alunosSorted = new ArrayList<>();
 	
 	public ColecaoAluno() {
 		super();
@@ -31,17 +33,22 @@ public class ColecaoAluno implements IColecaoGenerica<Aluno> {
 		
 		if(i == 0)
 			alunos.add(aluno);
+		else
+			System.out.println("Não inserido: "+ aluno.getNome() + ", pois já contém esse aluno nesse semestre.");
 	}
 	
 	public void ordena() {
-		List<Aluno> alunosSorted = alunos.stream().collect(Collectors.toList());
+		alunosSorted = alunos.stream().collect(Collectors.toList());
 		Collections.sort(alunosSorted, (a1, a2) -> a1.getNome().compareTo(a2.getNome()));
 	}
 
 	@Override
 	public Iterator<Aluno> getIterator() {
 		// TODO Auto-generated method stub
-		return alunos.iterator();
+		if(alunosSorted.isEmpty())
+			return alunos.iterator();
+		else
+			return alunosSorted.iterator();
 	}
 
 }

@@ -1,6 +1,6 @@
 package trabalho.t1.domain;
 
-public class Pessoa implements IPossuiNome {
+public abstract class Pessoa implements IPossuiNome {
 
 	private int matricula;
 	private String nome;

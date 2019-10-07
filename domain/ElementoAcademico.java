@@ -1,6 +1,6 @@
 package trabalho.t1.domain;
 
-public class ElementoAcademico implements IPossuiNome {
+public abstract class ElementoAcademico implements IPossuiNome {
 
 	private int codigo;
 	private String nome;

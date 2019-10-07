@@ -1,5 +1,6 @@
 package trabalho.t1.service;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -13,6 +14,7 @@ import trabalho.t1.domain.IColecaoGenerica;
 public class ColecaoDisciplina implements IColecaoGenerica<Disciplina> {
 
 	private Set<Disciplina> disciplinas = new HashSet<>();
+	private List<Disciplina> disciplinaSorted = new ArrayList<>();
 
 	public ColecaoDisciplina() {
 		super();
@@ -29,14 +31,19 @@ public class ColecaoDisciplina implements IColecaoGenerica<Disciplina> {
 		}	
 		if(i == 0)
 			disciplinas.add(disciplina);
+		else
+			System.out.println("Não inserido: "+ disciplina.getNome() + ", pois já contém essa disciplina nesse semestre.");
 	}
 
 	public void ordena() {
-		List<Disciplina> disciplinaSorted = disciplinas.stream().collect(Collectors.toList());
+		disciplinaSorted = disciplinas.stream().collect(Collectors.toList());
 		Collections.sort(disciplinaSorted, (a1, a2) -> a1.getNome().compareTo(a2.getNome()));
 	}
 	
 	public Iterator<Disciplina> getIterator() {
-		return disciplinas.iterator();
+		if(disciplinaSorted.isEmpty())
+			return disciplinas.iterator();
+		else
+			return disciplinaSorted.iterator();
 	}
 }

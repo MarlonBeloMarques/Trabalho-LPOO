@@ -14,6 +14,7 @@ public class MainApp {
 		Aluno alu2 = new Aluno(2345, "Marlon", 7);
 		Aluno alu3 = new Aluno(1234, "Leandro", 3);
 		Aluno alu4 = new Aluno(1244, "Leandro", 3);
+		Aluno alu5 = new Aluno(1244, "Ana", 5);
 		
 		ColecaoAluno colAlu = new ColecaoAluno();
 		ColecaoDisciplina colDiscp = new ColecaoDisciplina();
@@ -22,6 +23,9 @@ public class MainApp {
 		colAlu.adicionaAluno(alu2);
 		colAlu.adicionaAluno(alu3);
 		colAlu.adicionaAluno(alu4);
+		colAlu.adicionaAluno(alu5);
+		
+		colAlu.ordena();
 		
 		ImprimeColecao<Aluno> impCol1 = new ImprimeColecao<Aluno>(colAlu);
 		
@@ -38,6 +42,8 @@ public class MainApp {
 		colDiscp.adicionaDisciplina(discp3);
 		colDiscp.adicionaDisciplina(discp4);
 		colDiscp.adicionaDisciplina(discp5);
+		
+		colDiscp.ordena();
 		
 		ImprimeColecao<Disciplina> impCol2 = new ImprimeColecao<Disciplina>(colDiscp);
 		
