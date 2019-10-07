@@ -1,6 +1,6 @@
 package trabalho.t1;
 
-public class Aluno extends Pessoa {
+public class Aluno extends Pessoa implements IPossuiSemestre {
 
 	private int semestre;
 	

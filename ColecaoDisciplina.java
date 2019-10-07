@@ -20,7 +20,9 @@ public class ColecaoDisciplina implements IColecaoGenerica<Disciplina> {
 		if(disciplinas.isEmpty())
 			disciplinas.add(disciplina);
 		for (Disciplina disciplina2 : disciplinas) {
-			i += ComparaNome.compare(disciplina, disciplina2);
+			if(ComparaNome.compare(disciplina, disciplina2) == 1 && ComparaSemestre.compare(disciplina, disciplina2) > 0) {
+				i++;
+			}
 		}	
 		if(i == 0)
 			disciplinas.add(disciplina);

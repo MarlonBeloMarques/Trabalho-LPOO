@@ -1,6 +1,6 @@
 package trabalho.t1;
 
-public class Disciplina extends ElementoAcademico {
+public class Disciplina extends ElementoAcademico implements IPossuiSemestre {
 
 	private int semestre;
 	private int cargaHoraria;

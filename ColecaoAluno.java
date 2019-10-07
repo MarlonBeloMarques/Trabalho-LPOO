@@ -21,7 +21,9 @@ public class ColecaoAluno implements IColecaoGenerica<Aluno> {
 		if(alunos.isEmpty())
 			alunos.add(aluno);
 		for (Aluno aluno2 : alunos) {
-			i += ComparaNome.compare(aluno, aluno2);
+			if(ComparaNome.compare(aluno, aluno2) == 1 && ComparaSemestre.compare(aluno, aluno2) == 1) {
+				i++;
+			}
 		}
 		
 		if(i == 0)
